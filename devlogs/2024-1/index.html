@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Devlogs by Guanpeng Chen</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../src/output.css" rel="stylesheet">
+    </head>
+    <body class="bg-stone-800">
+    <div class="container py-16 px-4">
+        <h1 class="text-5xl font-bold text-center text-slate-50">
+            Devlogs by Guanpeng Chen
+        </h1>
+    </div>
+    
+    <!--Social Icons-->
+    <div class="container">
+        <div class="flex justify-center space-x-4">
+    
+            <!--Twitter-->
+            <a href ="https://twitter.com/cguanpeng" target="_blank">
+                <img class="size-8" src="../../images/x.png">
+            </a>
+    
+            <!--Discord-->
+            <a href ="https://discord.com/invite/ZxmFQmqgpj" target="_blank">
+                <img class="size-8" src="../../images/discord.png">
+            </a>
+    
+            <!--Steam-->
+            <a href="https://store.steampowered.com/developer/cguanpeng" target="_blank">
+                <img class="size-8" src="../../images/steam.png">
+            </a>
+    
+            <!--itch-->
+            <a href ="https://undercurrent.itch.io/" target="_blank">
+                <img class="size-8" src="../../images/itch.png">
+            </a>
+    
+        </div>
+    </div>
+    
+    <!--Nav Buttons-->
+    <div class="flex justify-center pt-8">
+        <a href="/">
+            <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                Games
+            </button>
+        </a>
+        <a href="/devlogs">
+            <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+                Devlogs
+            </button>
+        </a>
+    </div>
+    
+    <main class="relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8">
+        <div class="container py-8 px-4">
+            <hr class="bg-slate-50 border-1">
+            <div class="py-12 px-4">
+                <h3 class="mb-1 text-3xl font-semibold text-slate-50"><a href="#">Noah Devlog 1 - From Sudoku to Game</a></h3>
+                <time class="py-2 mb-2 text-lg font-normal leading-none text-gray-400 dark:text-gray-500">Jan 31, 2024</time>
+                <div class="text-slate-50 px-4 pb-4 pt-8">
+                    <p>It's 2:55 at midnight, Jan 23, 2024. My hands are so cold so I turned on the heater, thinking I'll turn that off in just a minute to save electricity bill.
+A heater is too expansive for an indie game developer who just quit his day job.</p>
+<br>
+<p>I'm pretty tired but I don't want to go to bed just yet. I want to spend every waking minute making this new game because I enjoy the process so much.
+Still at the honeymoon phase with it, I guess.</p>
+<br>
+<p>This new game (<a href="https://store.steampowered.com/app/2775160/"><u>Noah's Dilemma</u></a>) has almost no story so I can happily focus on making the gameplay. A lot of programming challenges but they can be solved with logic one by one.
+Writing stories on the other hand requires a lot more energy and is much more unpredictable.</p>
+<br>
+<p>That is why people always advice against putting stories in
+games that are supposed to be small in scale. I've done stories in my last game so I know it's true.
+I love stories but having no need to think about them just makes a game much easier to make.</p>
+<br>
+<p>Ok, enough of writing this and I have to go back to finish today's development task.
+Heater's off, and I'll pick up from here another time.</p>
+<br>
+<hr>
+<br>
+<p>It's midnight again on Jan 27, 2024. Since January is almost over, I can start listing out all the important progress I made this month.</p>
+<br>
+<p>In chronological order:</p>
+<br>
+<h2>1. Found out the hard truth about Steamdeck.</h2>
+<p>That is you cannot get your game officially verified for Steamdeck unless Steam thinks your game is qualified.
+I only knew this because I tried to do controller support for my game Booth.</p>
+<br>
+<p>Without an official verification, even if the game runs fine on Steamdeck I think it's hardly going to sell more. Also considering the difficulty of adding controller support in GameMaker (even with the help of the great plugin Input), I had to pause this task and shift all my focus back on my new game Noah.</p>
+<br>
+<h2>2. Prepared for the Steam store page of Noah.</h2>
+<p>Getting a steam store page ready requires 3 major things: key art with a game logo, five screenshots, and description (with localization preferably).</p>
+<br>
+<p>I spent 9 days preparing all that, and some screenshots are just mock-up that needs to be implemented at a later stage. It's better to get your store page up
+as soon as possible so that you can start accumulating wishlists at an early stage.</p>
+<br>
+<h2>3. Built a new personal website.</h2>
+<p>Before releasing the steam store page I spent a weekend making my new personal website. If I want to continue my gamedev career as a solo developer
+it's better for me to have a dedicated website.</p>
+<br>
+<p>I had some experience making websites before,
+but this time I wanted to try something new and find out the most painless way for me to do it. After a whole day of researching and experimenting,
+I settled down with the combination of 11ty and Tailwind. These two are the perfect tools for my need of running a static website with blog posts.</p>
+<br>
+<h2>4. Released the Steam store page of Noah.</h2>
+<p>I picked a Wednesday to release Noah's steam store page to see how many wishlists I can get on the first day.
+When releasing a game on steam, we can only pick weekdays, so I wanted to see how it'd perform on a Wednesday.</p>
+<br>
+<p>The result is, after announcing it everywhere, 33 wishlists on the first day.
+My last game Booth had 40 wishlists on the first day, but it had a pretty good trailer. This is the first time I put out a store page without a video.
+Anyway, there's no need to get discouraged because it's a long way to go from here. I'll be constantly updating the content of the store page and
+let's see how it goes in the next month.</p>
+<br>
+<h2>5. Great progress on Noah.</h2>
+<p>Some developers think it's a bad idea to spend time on art at an early stage, but for me, making sure the game looks good is essential for my
+motivation. I also think art plays an important role in the whole experience of Noah. So this month, I drew the sea, the ark, and the animals.</p>
+<br>
+<p>As for gameplay, some of the most important features have also been implemented, such as choosing which path to travel on sea.</p>
+<br>
+<h2>6. Started a secret side project.</h2>
+<p>I don't know about other developers but I always need a side project for the sake of relaxation.
+My ideal side project would be a small game I can work on without thinking too much about reception.</p>
+<br>
+<p>I had a lot of side projects before but they all failed due to the same reason:
+they turned out to be not that small and required a lot more time than I thought.
+I've learnt throughout the years that I just can't work on two serious projects at once,
+so a side project needs to be truly small in scale and stay that way.</p>
+<br>
+<p>This new one I came up with has been looking good so far, but I probably felt this way everytime so let's just wait and see.
+My hope is to finish this side project within this year and maybe even release it prior to Noah.</p>
+<br>
+<h2>Other Stuff</h2>
+<p>Another thing worth mentioning is that for the entire January, I have been running every Wednesday.
+I want to keep doing this and one of my yearly goals is running 2000m without taking a break. Good physical health is also important for indie developers.</p>
+<br>
+<p>I think that's all for January. There's an indie game contest I took part in, but the result has not come out yet. No matter the result,
+the thing I should do remains the same: finishing the game.</p>
+
+                </div>
+            </div>
+            <hr class="bg-slate-50 border-1">
+        </div>
+    </main>
+    
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+        kofiWidgetOverlay.draw('cguanpeng', {
+            'type': 'floating-chat',
+            'floating-chat.donateButton.text': 'Support me',
+            'floating-chat.donateButton.background-color': '#00b9fe',
+            'floating-chat.donateButton.text-color': '#fff'
+        });
+    </script>
+    </body>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center pt-6 pb-8 mb-4 text-base font-normal text-gray-500">
+                <a href="https://twitter.com/cguanpeng" target="_blank">Guanpeng Chen</a> 2024 © All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+</html>
