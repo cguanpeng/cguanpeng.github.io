@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+    <head>
+        <title>2025年1月ゲーム開発月報</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../src/output.css" rel="stylesheet">
+    </head>
+    <body class="bg-stone-800">
+    <div class="container py-16 px-4">
+        <h1 class="text-5xl font-bold text-center text-slate-50">
+            Blog by Guanpeng Chen
+        </h1>
+    </div>
+    
+    
+
+    
+
+    
+    <!--Social Icons-->
+    <div class="container">
+    <div class="flex justify-center space-x-4">
+
+        <!--Twitter-->
+        <a href ="https://x.com/cguanpeng" target="_blank">
+            <img class="size-8" src="/images/x.png">
+        </a>
+
+        <!--Discord-->
+        <a href ="https://discord.com/invite/ZxmFQmqgpj" target="_blank">
+            <img class="size-8" src="/images/discord.png">
+        </a>
+
+        <!--Steam-->
+        <a href="https://store.steampowered.com/developer/cguanpeng" target="_blank">
+            <img class="size-8" src="/images/steam.png">
+        </a>
+
+        <!--itch-->
+        <a href ="https://undercurrent.itch.io/" target="_blank">
+            <img class="size-8" src="/images/itch.png">
+        </a>
+
+    </div>
+</div>
+
+
+    <!--Nav Buttons-->
+    <div class="flex justify-center pt-8">
+        <a href="/ja">
+            <button class="text-gray-400 hover:text-white border-2 border-gray-600 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                ゲーム
+            </button>
+        </a>
+        <a href="/blog-ja">
+            <button class="text-gray-400 hover:text-white border-2 border-gray-600 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                ブログ
+            </button>
+        </a>
+    </div>
+    
+    
+    <main class="relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8">
+        <div class="container py-8 px-4">
+            <hr class="bg-slate-50 border-1">
+            <div class="py-12 px-4">
+                <h3 class="mb-1 text-3xl font-semibold text-slate-50">2025年1月ゲーム開発月報</h3>
+                <time class="py-2 mb-2 text-lg font-normal leading-none text-gray-500">Feb 1, 2025</time>
+                <div class="text-slate-50 px-4 pb-4 pt-8">
+                    <p>はじめまして、日本在住のインディーゲーム開発者GP（名前の略をあだ名として使われている）です。2025年から本格的にブログを書こうと決めました。まずは月報の形で一ヶ月一本の最低限を維持して書いていきたいと思います。
+<br><br>
+日本語は母国語ではないので、chatGPTに直してもらうのもできるが、あえて使わず自力で書きます。ミスがあっても、不自然な所があっても、それはそれで味がすると思います。見た目も遊び方も似ているゲームより、十人十色のインディー作品の方が好きなので、ブログも完璧な日本語より癖のある日本語で書いてみたいなと考えました。そしてこのブログを「月報」と名付けましたが、その月にやったことの羅列にするつもりはなく、その月に思考したことや学んだこと、感じたことなど、自由に綴っていきたいと思います。
+<br><br></p>
+<h2>なぜ日本語でブログを書きたいのか</h2>
+<p>日本語でブログを書いて、日本のプレイヤーがブログを読んで僕のゲームに興味を持ち始め、いつか買ってもらえる……と、それは一番理想なシナリオだけど、経験上、ブログの宣伝効果は多分ゼロに近いと思う。いや、効果ゼロと言うより、ブログは読者の心にタネを埋めるような物だと考えたい。今は効果ゼロでも、いつかは芽生えるかもしれない。宣伝にあたって、知ってもらえることだけでもう十分だ。
+<br><br>
+そのゆえ、宣伝より単純に日本語で何かを書きたい気持ちの方が大きいかもしれない。会社を辞めてから、自作の日本語ローカライズ以外、なかなか日本語をアウトプットする機会がないので、ブログで日本語の能力を磨いたい気持ちもある。そしてより重要なのは、日本語でしか書けないことがあると気が付いた。
+<br><br>
+長い間、極めて個人的な悩みだけど、どの言語でブログを書くかを迷いながら何も書けずにいた。一番書きやすい母国語で書いて日本語や英語に翻訳する形を取ろうと思ったところ、どうしても違和感を拭けなかった。なぜなら、違う言語で文章を書く時に内容も人格も影響されて結局違うものを書いてしまうから、もし全てを母国語で書いたら、書きやすさのわりに書けるものが逆に減ってしまうからだ。例えば、日本語以外でブログを書くなら、日本の漫画家やお笑い芸人の話は普通書かないと思う。
+<br><br>
+従って最終的に決めたやり方としては、日本語と英語、中国語でそれぞれのブログを持ち、それぞれに違うものを書くのだ。一見効率悪いかもしれないが、結局これでどの言語においても一番書けるじゃないかと思う。
+<br><br></p>
+<h2>SNSが多すぎる問題について</h2>
+<p>僕のゲームの売上データから見ても、いまのSteamユーザー数から見ても、購入者は中国と欧米と日本のプレイヤーがほとんどで、2020年のデビュー作発売以来僕は3つの国のSNSを持つことになっている。特に近年はTwitterの事情でまた数が増えて、合計7つか8つを持っているから、どうやって使っていくか、どれを使っていくかはリアルな問題になった。
+<br><br>
+本当はSNSなんか使わなくてもいいんだと言いたいが、いまはまだSNSなしでゲームを売れる自信がないからまだこんな問題で悩んではいるが……いつかSNSなしでゲームを作ってリリースしてどれくらいの差があるかを検証してみたいけど、いまはまだそれをやる余裕がない。あと数が多すぎる問題の他にも言語の問題がある。いまXでは日本語と英語を両方使っているけど、フォロワーが気にしていなくてもOCDの僕にとってはとても耐えられないのだ。数を減らすことはいまの段階ではできなさそうで、とりあえずXを日本語のみにして、Blueskyを英語のみにしてよさそうな気がする。でも大事なお知らせはXで英語で叫びたい気持ちもあるな……ああ、もう分からない。
+<br><br>
+最終手段として、「どうぜ誰もそこまで君のことを気にしていないからどうだっていいんだ」と自分に言い聞かせるしかない。実際そうだし。
+<br><br></p>
+<h2>あることについて日本のゲームメディアは個人開発者にやさしい</h2>
+<p>近いうちに新作『ノアのジレンマ』のDemoとトレーラーを公開する予定なので、最近はプレスリリースの準備を進めている。そしてゲームメディアのリストを整理している中、以下の理由で日本のゲームメディアは個人開発者にやさしいなと感じた。
+<br><br>1. ほとんどの所はプレスリリースの窓口を明記していて誰でも使える<br>2. 日本のゲームメディアの数はそんなに多くないから対応しやすい<br>3. 日本のゲームメディアはインディーゲームの取り扱いが多い
+<br><br>
+プレスリリースを送るのはまだ先だけど、少なくともこの段階では他国のゲームメディアに比べてとても好印象だ。この違いの理由はサービス精神のほかにも、日本での個人ゲーム開発者がまだ比較的に少ない、日本語のハードルが高いなどが考えられるが、とりあえずまた日本語を学んでよかったなと思った。
+<br><br></p>
+<h2>今月の振り返りと来月の目標</h2>
+<p>今月は来月のSteam Next Festのために全部の時間を捧げた。まだゲーム本体の内容は作り切ってないが、それをストップしてまずは初公開のDemoを限界まで仕上げた。そして日本語、英語、中国語の三つのバージョンのトレーラーを編集から作曲までやった。本当に三つのバージョンが必要かと、自分でも疑ったけど、やれることをやるつもりでやった。作業自体は面倒すぎて二度とやりたくないけど……それからはQAと不具合修正の繰り返し、下旬になってからは個人サイトやブログの更新、プレスキッドの制作、SNSとDiscordの準備、プレスリリースの準備など、プロモーションに繋がることをしていた。
+<br><br>
+来月の月末がSteam Next Festなので、その前にコントローラー対応（Steamdeck対応）を終わらせたいと思っている。Steamdeckのユーザーが増えてるし、将来的にSwitchに出したいのでやらざるを得ない。結構な変更が必要なので、QAも怠らずやり続けるつもりだ。そして日本語と英語系ゲームメディアへのプレスリリースもちゃんとやる、記事はそんなに期待しないけれども。やることも、実際にSteam Next Festの反響も、本リリースのリハーサルみたいなものなので、緊張しながらやり遂げたいと思っている。
+<br><br>
+実はもう一本のゲーム『スラムハック』もチームで作っていて、それも2月のSteam Next Festに参加する予定なので、それもいくつかのタスクがあはずだ。とりあえず、2月はとてつもなく忙しくなる。2月の月報が無事に書けるように。（合掌）
+<br><br></p>
+<p>GP</p>
+<p>2025.2.1</p>
+
+                </div>
+            </div>
+            <hr class="bg-slate-50 border-1">
+        </div>
+    </main>
+    
+    
+    </body>
+    <footer class="footer">
+    <div class="container">
+        <p class="text-center pt-6 pb-8 mb-4 text-base font-normal text-gray-500">
+            <a href="https://x.com/cguanpeng" target="_blank">Guanpeng Chen</a> © All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+</html>
