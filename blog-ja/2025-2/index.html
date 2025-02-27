@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+    <head>
+        <title>2025年2月ゲーム開発月報</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../src/output.css" rel="stylesheet">
+    </head>
+    <body class="bg-stone-800">
+    <div class="container py-16 px-4">
+        <h1 class="text-5xl font-bold text-center text-slate-50">
+            
+            Blog by Guanpeng Chen
+            
+        </h1>
+    </div>
+    
+    
+
+    
+
+    
+    <!--Social Icons-->
+    <div class="container">
+    <div class="flex justify-center space-x-4">
+
+        <!--Twitter-->
+        <a href ="https://x.com/cguanpeng" target="_blank">
+            <img class="size-8" src="/images/x.png">
+        </a>
+
+        <!--Discord-->
+        <a href ="https://discord.com/invite/ZxmFQmqgpj" target="_blank">
+            <img class="size-8" src="/images/discord.png">
+        </a>
+
+        <!--Steam-->
+        <a href="https://store.steampowered.com/developer/cguanpeng" target="_blank">
+            <img class="size-8" src="/images/steam.png">
+        </a>
+
+        <!--itch-->
+        <a href ="https://undercurrent.itch.io/" target="_blank">
+            <img class="size-8" src="/images/itch.png">
+        </a>
+
+    </div>
+</div>
+
+
+    <!--Nav Buttons-->
+    <div class="flex justify-center pt-8">
+        <a href="/ja">
+            <button class="text-gray-400 hover:text-white border-2 border-gray-600 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                ゲーム
+            </button>
+        </a>
+        <a href="/blog-ja">
+            <button class="text-gray-400 hover:text-white border-2 border-gray-600 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                ブログ
+            </button>
+        </a>
+    </div>
+    
+    
+    <main class="relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8">
+        <div class="container py-8 px-4">
+            <hr class="bg-slate-50 border-1">
+            <div class="py-12 px-4">
+                
+                <h3 class="mb-1 text-3xl font-semibold text-slate-50">2025年2月ゲーム開発月報</h3>
+                
+                <time class="py-2 mb-2 text-lg font-normal leading-none text-gray-500">Mar 1, 2025</time>
+                <div class="text-slate-50 px-4 pb-4 pt-8">
+                    <p>2月は予想通り、新作『ノアのジレンマ』の試遊版リリースとコントローラー対応、Steam Next Festの準備と宣伝でいままでの開発期間中で一番忙しい日々を過ごしていた。幸い、タスクが全てクリアしたし、Steam Next Festが開始してから大きなトラブルもなく、ようやく少し息ができるようになったので、休憩がてら今回の月報を書き始めた。
+<br><br></p>
+<h2>なぜ日本語のDevlogが少ないかを考える</h2>
+<p>ゲームのDevlog（ゲーム開発者による開発記録）を見るのが好きで、ゲームを作り始めてからずっとユーチューブとかで漁って見ているが、日本語のDevlogがほとんど見当たらないから、その原因を少し考えてみた。
+<br><br>
+最初に思いついたのは、やはりTIGSourceという英語掲示板が2005からあって、そこで初めてゲームのDevlogを書く人が大量に現れたから、今に至って英語でゲームのDevlogを書くこと自体はもう普通のこと（あるいはゲームを完成させるためにやること）だと考えられているでしょう。そういう歴史的な原因以外、やはりアジア人共通の「自分を表に出す恥ずかしさ」もあると思う。作ったゲームが良ければそれを遊んでくれればいい、どう作ったかはそんなに重要じゃないと思う人もいれば、そもそもその過程を商業秘密にしたい人もきっといるはずだ。
+<br><br>
+そして何か日本特有の原因がないかを考えてみたら、たぶんドキュメンタリー文化の繫盛がその一つになる。テレビでクリエイターにフォーカスする番組がたくさんあって（「プロフェッショナル」、「情熱大陸」、「漫勉」など）、ユーチューブでも「街録」みたいなドキュメンタリーチャンネルが多数ある。このような環境の中にいると、自ら創作のプロセスを発信する必要性を感じなくなるのもおかしくないことだ。「いいものを作れば、ほかの誰かがそのプロセスを聞いてくる」から、いいものを作り上げた前には、プロセスを語る価値がないかもしれないと思ったりするでしょう。
+<br><br>
+もちろんこれは「日本語でDevlogをもっと書いたほうがいい」とかを言いたいわけではなく、単純に一つの観察として面白いなと思って書いてみた。
+<br><br></p>
+<h2>いがらしみきおと榎本俊二</h2>
+<p>2016年日本に留学しにきてからずっとマンガ（主に青年漫画）を読んでいるが、なんで今まで知らなかったかと感心させられた漫画家さんは現在二人がいる。去年初めていがらしみきお先生の『SINK』を読んで衝撃を受けて、今月初めて榎本俊二先生の『斬り介とジョニー四百九十九人斬り』を読んでまた衝撃を受けた。ものすごく面白いのに知っている人が少ないケースは英語で「Hidden Gem」と呼ばれているが、この二人の作品を「Hidden Gem」と言うのが絶対失礼だと分かるが（ただ僕が知らなかっただけ）、今よりもっと読まれるべきなのが間違いない。
+<br><br>
+今月はいがらしみきお先生の最新作『人間一生図巻』も読んだ。「人の一生をたったの8ページで描き切る」お題に対して、バックグラウンドも性格も時代も違う人の一生を20回も面白く描いた想像力と表現力に痺れた。70歳の高齢でこんな作品を描けるのもすごかった。これからも新作を楽しみにしている。ちなみにいがらしみきお先生が自らから「最高傑作」と言った『Ｉ【アイ】』は全巻購入したけど、まだ読んでいない。なぜなら僕は一番おいしい所を最後まで残したいタイプだから、まずはほかの作品（『ぼのぼの』は長いので一旦除き）を全部読んでからと決めた。榎本俊二先生の他の作品もこれから読む予定。
+<br><br>
+よく考えたら、好きな漫画家さんは本当に増え続けているな。日本マンガはこれからもこういうサプライズを与えてくれ続けてほしい！大好きなマンガにインスパイアされたゲームもきっとこれからは作ると思う。
+<br><br></p>
+<h2>試遊版とトレーラーのリリース</h2>
+<p>今月は新作『ノアのジレンマ』の試遊版と初トレーラーを公開した。本リリースのリハーサルのつもりで、すべてのSNSを使って宣伝した。そのタイミングでBlueskyを英語専用に、Xを日本語専用に切り替えて、気持ちがスッキリした。
+<br><br>
+プレスリリースの下書きは事前に書き終わったが、試遊版の不具合修正などで当日のプレスリリース送付ができなかった。それが原因の一つか、翌日にプレスリリースを送ったものの、どこでも扱われることがなかった。反省点としては、事前に書いて事前に時間を設定して送ればよかった。試遊版とトレーラーの公開はあまり反響がなかったけど、いろんなプレイヤーからもらったフィードバックはポジティブ多めで、建設的な意見もたくさん頂いて、小さいな成功を達成したと考える。
+<br><br>
+いまの時点で反響がそんなにないことはポジティブに捉えることもできる。なぜなら、無名のままでリリースして、本当にいいものができたら、その流れで発見されたほうがインパクトが大きいからだ。2019年M-1のミルクボーイみたいにね。インディーゲームを作り続けたいなら、現実を見ながらもこういうポジティブ思考はわりと重要だと思う。
+<br><br>
+Steam Next Festは今でも進行中で、最終的にどのような宣伝効果をもたらしたかはまだ言えないが、少なくともこの二日間だけでWishlistが40％増えたので、勢いが良いかと。その勢いを最後までキープしてほしい！
+<br><br></p>
+<h2>来月の目標</h2>
+<p>2月はゲームの実際の内容を一切作ってないから、なんかそわそわしているが、3月はようやくまた普通の開発ペースに戻れる。いや、5月の頭にリリースしたいので、「普通のペース」だと間に合わないかもしれない。「ラストスパートのペース」で行く！残ってる内容はラスボスとエンディングのみで、3月はそれらを終わらせよう。それではまた来月で！
+<br><br></p>
+<p>GP</p>
+<p>2025.3.1</p>
+
+                </div>
+            </div>
+            <hr class="bg-slate-50 border-1">
+        </div>
+    </main>
+    
+    
+    </body>
+    <footer class="footer">
+    <div class="container">
+        <p class="text-center pt-6 pb-8 mb-4 text-base font-normal text-gray-500">
+            <a href="https://x.com/cguanpeng" target="_blank">Guanpeng Chen</a> © All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+</html>
