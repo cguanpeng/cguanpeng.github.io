@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+    <head>
+        <title>《诺亚的困境》开发日志#2：编程回顾</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../src/output.css" rel="stylesheet">
+    </head>
+    <body class="bg-stone-800">
+    <div class="container py-16 px-4">
+        <h1 class="text-5xl font-bold text-center text-slate-50">
+            
+            Blog by Guanpeng Chen
+            
+        </h1>
+    </div>
+    
+    
+
+    
+    <!--Social Icons-->
+    <div class="container">
+    <div class="flex justify-center space-x-4">
+
+        <!--Douban-->
+        <a href ="https://www.douban.com/people/cevia/" target="_blank">
+            <img class="size-8" src="/images/douban.png">
+        </a>
+
+        <!--Mastodon-->
+        <a href ="https://mstdn.jp/@undercurrent" target="_blank">
+            <img class="size-8" src="/images/mastodon.png">
+        </a>
+
+        <!--Steam-->
+        <a href="https://store.steampowered.com/developer/cguanpeng" target="_blank">
+            <img class="size-8" src="/images/steam.png">
+        </a>
+
+        <!--itch-->
+        <a href ="https://undercurrent.itch.io/" target="_blank">
+            <img class="size-8" src="/images/itch.png">
+        </a>
+
+    </div>
+</div>
+
+
+    <!--Nav Buttons-->
+    <div class="flex justify-center pt-8">
+        <a href="/zh">
+            <button class="text-gray-400 hover:text-white border-2 border-gray-600 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                游戏
+            </button>
+        </a>
+        <a href="/blog-zh">
+            <button class="text-gray-400 hover:text-white border-2 border-gray-600 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                博客
+            </button>
+        </a>
+    </div>
+    
+
+    
+    
+    <main class="relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8">
+        <div class="container py-8 px-4">
+            <hr class="bg-slate-50 border-1">
+            <div class="py-12 px-4">
+                
+                <h3 class="mb-1 text-3xl font-semibold text-slate-50">《诺亚的困境》开发日志#2：编程回顾</h3>
+                
+                <time class="py-2 mb-2 text-lg font-normal leading-none text-gray-500">Apr 15, 2025</time>
+                <div class="text-slate-50 px-4 pb-4 pt-8">
+                    <p>在上一篇开发日志的结尾我说争取4月更新下一篇，没想到我真的4月更新下一篇了，只不过是2025年的4月…… 好吧，距离上一篇开发日志已经过去了整整一年，可以说是在<a href="https://store.steampowered.com/app/2775160/">《诺亚的困境》</a>所有内容做完以后我才终于有了时间继续写，也可以说是因为在开发的过程中，迭代的速度非常快以至于没法在途中停下来总结任何东西——今天做出的决定，很可能第二天就会被推翻。总之，现在在游戏做完后发售前的这一小段时间里，我将会趁热打铁，尝试把《诺亚》的开发日志系列补完。
+<br><br>
+第二篇开发日志首先想聊聊编程方面。在制作《诺亚》的过程中，并没有遇到什么值得拿出来单独说的技术上的挑战，所以这篇文章将会从一个宏观角度来进行编程上的总结与回顾。
+<br><br></p>
+<h2>当我写程序时我在写什么</h2>
+<p>因为《诺亚》是我辞职以后全职做的第一个游戏，也是我用Unity引擎开发的第一个商业游戏，所以我在项目开始时就给自己定了一个主线任务和一个支线任务。主线任务，毫无疑问，就是好好地用Unity引擎把这个游戏做完发售——不要中途放弃，也不要做到一半换引擎。而支线任务，则是在做这款游戏的过程中，建立起泛用的代码库，以达成将来“游戏越做越快”的效果。对于收入尚未稳定的全职独立游戏开发者来说，速度就是生命。
+<br><br>
+之所以早早地就产生了这个想法，是因为即便我只做完过一款商业游戏，在数个失败的原型开发中也已经尝够了反复重写某些功能的痛苦滋味。于是这次边做就边把那些几乎所有类型的游戏都会需要的功能写成了可方便重复利用的形式。具体列表如下：</p>
+<ul>
+<li>标题画面</li>
+<li>游戏设置</li>
+<li>存档读档</li>
+<li>音频管理</li>
+<li>Scene管理</li>
+<li>UI管理</li>
+<li>UI泛用面板</li>
+<li>本地化相关</li>
+<li>Steam相关</li>
+<li>商店系统</li>
+<li>背包系统</li>
+<li>对话系统</li>
+<li>文字外观处理</li>
+<li>手柄支持相关</li>
+<li>Credits画面</li>
+</ul>
+<p>有了这些代码库，相当于我做下一款游戏时这15个部分的代码都几乎不用写了，这带来的时间节省是巨大的。就算主线任务完成后赚不到钱，起码这个支线任务也可以给我带来实际收益，也算是做了一点风险控制吧。《诺亚》的下一款游戏我定的目标是在6个月之内做完发售，要是没有这些前期准备肯定是难以达成的。如果你以后也想全职做独立游戏，不妨也从上述的方面开始积累代码库。
+<br><br></p>
+<h2>踩坑是一种必然</h2>
+<p>虽然说做《诺亚》没有遇到什么技术上的挑战，但也是踩了数个印象深刻的坑的，其中不乏早就略有耳闻但没怎么当回事于是learn it the hard way的例子，现在记下来也是为了提醒未来的自己不要重蹈覆辙，如果你也（用Unity）做游戏，说不定可以参考一下（即使踩坑是一种必然）。</p>
+<ul>
+<li>做Roguelike游戏不要用UnityEngine.Random，而要用System.Random。如果用了前者将难以还原随机状态，也就是难以实现自定义随机种子的功能。</li>
+<li>做Roguelike游戏时除了该用Scriptable Object来承载数值，在取得数值时还应避免直接reference而应该采用getter函数，这样处理数值时会灵活很多。</li>
+<li>不要用Unity自带菜单来新建UI元素，而要采用自制的prefab。这样本地化对应、文字外观处理都会很方便，不然可能要手动一个个去改。</li>
+<li>在写任何代码前就先确认这个游戏是否需要对应手柄，如果需要，提前思考要怎么对应手柄与键鼠在游戏中的无缝切换，后期才加的话会非常辛苦。</li>
+<li>如果发现自己总是在重复写一些类似的代码，大概率会有不需要重复的更好的写法。</li>
+</ul>
+<p>最后两条其实也可以说是隶属于写代码的最佳实践（best practice）。我不认为自己是一个优秀的程序员，我对自身的定义也从来不是程序员而是游戏开发者，这当中的区别是游戏开发者写代码通常不会考虑到什么是最佳实践，比起写完美的代码，还是快点把游戏做出来更重要。
+<br><br>
+在完成了两个商业游戏后，我发现写游戏代码既不是应该追求极致的速度而写得越dirty越好，也不是应该追求完美的最佳实践而把大量的时间花费在构建代码上面，而是应该找到介于这两者之间的一个sweet spot，一个平衡点——对于一些关键且固定的部分，就应该像上述第4点一样，提前做慎密的代码构筑；而对于一些无关紧要或者经常迭代改变的部分，可能只有在达到了某种复杂程度后才需要去做代码优化。而为了找到这个平衡点，为了拥有判断哪些部分应该细致哪些部分可以随意的能力，除了多做游戏积累经验以外似乎也没有什么提前学习的好办法——有一些坑不自己踩过永远不知道痛。所以，make (and finish) more games！
+<br><br></p>
+<h2>使用的插件工具介绍</h2>
+<p>关于编程好像能说的也就这么多了，其实之后移植switch应该会遇到一些技术上的挑战的，不过因为NDA也无法写成文章，那就聊到这里吧。再附上这次项目使用了的Unity第三方插件列表：</p>
+<ul>
+<li>
+<p>DOTween Pro</p>
+<p>用来处理所有的动画，有免费版。对我来说是做每个游戏必备的插件。</p>
+</li>
+<li>
+<p>Odin Inspector</p>
+<p>用于提高与Editor互动效率的效率软件，贵但好用，每个游戏都能用。</p>
+</li>
+<li>
+<p>Dialogue System for Unity</p>
+<p>用来处理所有的对话和本地化，贵但好用。如果没有对话的话，我会直接使用Unity官方的Localization Package来做本地化。</p>
+</li>
+<li>
+<p>All in 1 Sprite Shader</p>
+<p>用来美化2D图片的视觉效果，不用自己写shader，省时省力。</p>
+</li>
+<li>
+<p>LeanPool</p>
+<p>提供Pooling相关的功能，省时省力。</p>
+</li>
+<li>
+<p>Damage Numbers Pro</p>
+<p>用于生成所有的文字反馈，有丰富的自定义功能，省时省力。</p>
+</li>
+<li>
+<p>Text Animator</p>
+<p>用来animate一些UI文本，有预览很直观，省时省力。</p>
+</li>
+<li>
+<p>Rider</p>
+<p>这个不是插件而是IDE，用Rider写码可以说为我节省了一半以上的debug和refactoring时间，对我来说也是必备软件。</p>
+</li>
+</ul>
+<br>
+之后的开发日志将会聊到《诺亚》的其他方面包括游戏设计，可以说这次项目的主要挑战不在技术而在设计上，对设计感兴趣的朋友可以留意一下，应该近期就会发布了。计划中的开发日志系列如下：
+<ul>
+<li><a href="/blog-zh/noah-1">《诺亚的困境》开发日志#1：数独与方舟</a>（关于原型与立项） - 已发布</li>
+<li><a href="/blog-zh/noah-2">《诺亚的困境》开发日志#2：编程上的总结与回顾</a>（关于编程） - 已发布</li>
+<li>《诺亚的困境》开发日志#3：设计上的总结与回顾（关于游戏设计与UI设计）</li>
+<li>《诺亚的困境》开发日志#4：氛围与声音（关于作曲与音效）</li>
+<li>《诺亚的困境》开发日志#5：海上的百年孤独（关于美术与世界观）</li>
+</ul>
+<p><br><br>
+最后，我的第二款独立游戏<a href="https://store.steampowered.com/app/2775160/">《诺亚的困境》</a>将会在下个月（2025年5月）于Steam发售，现在加入愿望单可以第一时间收到发售通知噢。敬请期待！
+<br><br></p>
+<p>GP</p>
+<p>2025.4.15</p>
+
+                </div>
+            </div>
+            <hr class="bg-slate-50 border-1">
+        </div>
+    </main>
+    
+    
+    </body>
+    <footer class="footer">
+    <div class="container">
+        <p class="text-center pt-6 pb-8 mb-4 text-base font-normal text-gray-500">
+            <a href="https://x.com/cguanpeng" target="_blank">Guanpeng Chen</a> © All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+</html>
