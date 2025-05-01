@@ -483,7 +483,9 @@ h2 {
 }
 
 h3 {
-  font-size: 1.125rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
