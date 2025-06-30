@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+    <head>
+        <title>2025年6月ゲーム開発月報</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../src/output.css" rel="stylesheet">
+    </head>
+    <body class="bg-stone-800">
+    <div class="container py-16 px-4">
+        <h1 class="text-5xl font-bold text-center text-slate-50">
+            
+            Blog by Guanpeng Chen
+            
+        </h1>
+    </div>
+    
+    
+
+    
+
+    
+    <!--Social Icons-->
+    <div class="container">
+    <div class="flex justify-center space-x-4">
+
+        <!--Twitter-->
+        <a href ="https://x.com/cguanpeng" target="_blank">
+            <img class="size-8" src="/images/x.png">
+        </a>
+
+        <!--Discord-->
+        <a href ="https://discord.com/invite/ZxmFQmqgpj" target="_blank">
+            <img class="size-8" src="/images/discord.png">
+        </a>
+
+        <!--Youtube-->
+        <a href ="https://www.youtube.com/@cguanpeng" target="_blank">
+            <img class="size-8" src="/images/youtube.png">
+        </a>
+
+        <!--Steam-->
+        <a href="https://store.steampowered.com/developer/cguanpeng" target="_blank">
+            <img class="size-8" src="/images/steam.png">
+        </a>
+
+        <!--itch-->
+        <a href ="https://undercurrent.itch.io/" target="_blank">
+            <img class="size-8" src="/images/itch.png">
+        </a>
+
+    </div>
+</div>
+
+
+    <!--Nav Buttons-->
+    <div class="flex justify-center pt-8">
+        <a href="/ja">
+            <button class="text-gray-400 hover:text-white border-2 border-gray-600 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                ゲーム
+            </button>
+        </a>
+        <a href="/blog-ja">
+            <button class="text-gray-400 hover:text-white border-2 border-gray-600 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                ブログ
+            </button>
+        </a>
+    </div>
+    
+    
+    <main class="relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8">
+        <div class="container py-8 px-4">
+            <hr class="bg-slate-50 border-1">
+            <div class="py-12 px-4">
+                
+                <h3 class="mb-1 text-3xl font-semibold text-slate-50">2025年6月ゲーム開発月報</h3>
+                
+                <time class="py-2 mb-2 text-lg font-normal leading-none text-gray-500">Jul 1, 2025</time>
+                <div class="text-slate-50 px-4 pb-4 pt-8">
+                    <h2>Nintendo Switchへの移植</h2>
+<p>今月メインの仕事は、『ノアのジレンマ』をNintendo Switchに移植することだ。Unityを使っているので、コード自体を大きく変更する必要はなく、主にUI、文言、そしてパーフォマンス、この三つの修正になる。始める前に恐れていたパーフォマンス改善は、結局Profilerを使って問題を特定できたら、いくつかの設定を直したら一気に解決できた。複雑な3Dゲームならそう簡単にはいかないと思うが、とりあえず2Dのゲームでよかった。
+<br><br>
+これで移植もほぼ終わった、思ったよりずっと早かったなと思いきや、Nintendo eShopでのストアページの開設はまる一ヶ月かかってしまった。詳細は言えないが、要するに全てのリージョンにリリースするにはそれぞれのリージョンのローカルルールに従わなきゃいけないし、審査も別々で行われているから、一回ミスったらそのプロセスは長引く。一回目の知見があれば二回目以降はだいぶスムーズになると思うが、とりあえずこの文章を書いてる今、全てのリージョンの審査が無事に終わったので、7月にNintendo Switch版をリリースします！Nintendo Switch 2でも遊べるので、新機体の人気で少しでも多く売れたらな。
+<br><br></p>
+<h2>自分用のUnityゲームフレームワーク</h2>
+<p>移植の仕事も終わって、じゃ次は新作を作るか？と言うならそうでもない。『ノアのジレンマ』を作る途中、汎用的な機能（セーブ＆ロード、タイトル画面、オプション、コントローラー対応など）がたくさん存在しているのに気が付いて、同じ機能を何回も一から書くよりは、自分用のUnityゲームフレームワークを作ったほうがいいと決めた。
+<br><br>
+だからこの6月の大半は、時間をかけて、どのゲームも使えそうな機能だけでなく、僕が作りそうなゲームが絶対に使う機能も含め、これからの全ての新作のベースになれるゲームフレームワークを作った。これがあれば、これからの開発スピードは相当上がると思う。インディーゲーム開発者にとってスピードが命だからね。
+<br><br></p>
+<h2>二つの新作のプロトタイプ</h2>
+<p>上記のゲームフレームワークを作ってから新作を作るつもりではあったが、既に制作決定になった新作アイデア（少なくとも90％以上の把握があるもの）は作る前に技術的に可能かどうかの検証をやっておかないといけない。なので今月は検証を兼ね、二つの新作プロトタイプも作った。
+<br><br>
+触った感じからすると、多分近いうちに本開発に入るレベルの面白さは持っている。今年中にこの二作のDemoを完成させて、いろんなプログラムに応募する未来も見えている。しかしこの二つのゲームはどれもちゃんとしすぎるというか、『ノアのジレンマ』の後すぐ飛び込めるようなゲームではないなと感じた。次は何か3ヶ月でできそうな、息抜きができる、不真面目なゲームを作りたい、と今漠然と思っている。ということで、二つのプロトタイプがうまくできたにもかかわらず、次に作るゲームはまだ決められていない。
+<br><br></p>
+<h2>夏は来た、YouTubeデビューはまだ</h2>
+<p>ちょうどこのタイミングで夏が来て、すっかり夏休みモードに入った。蒸し暑い小さいな部屋に囲まれて、長年積んできたマンガを読んで夜を過ごしている。読みたいものがあって、読みたい時にすぐ読めるって、結構贅沢なことだなと今思った。今月読んだ一番面白いマンガは、谷口トモオ先生の『サイコ工場』だった。こんなにも面白いマンガがそんなにマイナーであることに驚いたが、サイコじゃないと理解できないのかなと思って一人でサイコ自慢をしていた。
+<br><br>
+ところで、YouTubeを真面目にやるための道具は買い揃えたけど、なかなか動画のテキスト部分を書く気にはならない。道具を買った上に、絶対に無駄にしたくないという自分の気持ちを利用すれば上手く始められると思っていたのに、1ヶ月も後伸ばしてしまった。来月こそは……！
+<br><br>
+こうやって書き出したら、6月は実感よりもやったことが多いみたいだ。7月はもっと本格的な夏休みになる予感があるのだが、そろそろ次何作るかくらいは決めておかないと。自分のために作る、何でもありの、一人で作るしか生まれない何かを。
+<br><br></p>
+<p>GP</p>
+<p>2025.7.1</p>
+
+                </div>
+            </div>
+            <hr class="bg-slate-50 border-1">
+        </div>
+    </main>
+    
+    
+    </body>
+    <footer class="footer">
+    <div class="container">
+        <p class="text-center pt-6 pb-8 mb-4 text-base font-normal text-gray-500">
+            © Guanpeng Chen. All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+</html>
