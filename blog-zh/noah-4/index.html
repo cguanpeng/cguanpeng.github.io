@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+    <head>
+        <title>《诺亚的困境》开发日志#4：氛围与声音</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../src/output.css" rel="stylesheet">
+    </head>
+    <body class="bg-stone-800">
+    <div class="container py-16 px-4">
+        <h1 class="text-5xl font-bold text-center text-slate-50">
+            
+            Blog by Guanpeng Chen
+            
+        </h1>
+    </div>
+    
+    
+
+    
+    <!--Social Icons-->
+    <div class="container">
+    <div class="flex justify-center space-x-4">
+
+        <!--Douban-->
+        <a href ="https://www.douban.com/people/cevia/" target="_blank">
+            <img class="size-8" src="/images/douban.png">
+        </a>
+
+        <!--Mastodon-->
+        <a href ="https://mstdn.jp/@undercurrent" target="_blank">
+            <img class="size-8" src="/images/mastodon.png">
+        </a>
+
+        <!--Youtube-->
+        <a href ="https://www.youtube.com/@cguanpeng" target="_blank">
+            <img class="size-8" src="/images/youtube.png">
+        </a>
+
+        <!--Steam-->
+        <a href="https://store.steampowered.com/developer/cguanpeng" target="_blank">
+            <img class="size-8" src="/images/steam.png">
+        </a>
+
+        <!--itch-->
+        <a href ="https://undercurrent.itch.io/" target="_blank">
+            <img class="size-8" src="/images/itch.png">
+        </a>
+
+    </div>
+</div>
+
+
+    <!--Nav Buttons-->
+    <div class="flex justify-center pt-8">
+        <a href="/zh">
+            <button class="text-gray-400 hover:text-white border-2 border-gray-600 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                游戏
+            </button>
+        </a>
+        <a href="/blog-zh">
+            <button class="text-gray-400 hover:text-white border-2 border-gray-600 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                博客
+            </button>
+        </a>
+    </div>
+    
+
+    
+    
+    <main class="relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8">
+        <div class="container py-8 px-4">
+            <hr class="bg-slate-50 border-1">
+            <div class="py-12 px-4">
+                
+                <h3 class="mb-1 text-3xl font-semibold text-slate-50">《诺亚的困境》开发日志#4：氛围与声音</h3>
+                
+                <time class="py-2 mb-2 text-lg font-normal leading-none text-gray-500">Jul 10, 2025</time>
+                <div class="text-slate-50 px-4 pb-4 pt-8">
+                    <p>在这一篇开发日志里我会分享一些自己对于音效的看法，以及聊一聊我是怎么完成《诺亚的困境》的音乐部分的。本文虽然隶属于开发日志系列，但也可以说是目前我对于游戏内音频认知的集合。这篇对比其它日志来说会比较短，因为音效都是找的，谈不上制作，而作曲更是门外汉自学后的第一次尝试，只能描述一个过程，说不出太多所以然。
+<br><br>
+对了，《诺亚的困境》（Noah’s Dilemma）现已在全球Nintendo Switch商店内开启9折预购，即将于7月24日解锁，对成品感兴趣的朋友，欢迎在Switch或者Steam（已发售）上购买支持，谢谢。
+<br><br></p>
+<h2>我的音效过程</h2>
+<p>如果说现在哪一个网站倒了对我做游戏影响最大，那一定是freesound.org。目前我做过的所有游戏的绝大部分音效都来自于这个网站上的用户通过CC0（Creative Commons 0）协议共享的免费音效，等我入能敷出了，一定会给网站打钱。
+<br><br>
+虽然免费的音效质量参差不齐，但是只要耐心寻找总能找到一款能用的，如果实在找不到，我会利用Audacity（也是免费软件）把一个最接近的音效调整成理想的效果。很幸运，《诺亚》目前所有的音效都通过这个流程完成了。如果这个流程走下来还是达不到满意的效果，我会拓宽搜索的范围到包含Attribution协议下共享的音效。Attribution协议的音效的使用要求就是要注明作者，我在做上一款游戏《空箱》的时候就使用了部分这样的音效，然后在游戏的Credits处注明了作者。
+<br><br>
+虽然目前音效仅靠freesound也完全够用了，但是之后我也有自己录制或者使用音乐软件制作音效的想法，过程可能会更繁琐，但音质和效果应该都能更接近理想状态。当然，这并不是说在freesound上找音效就一定是次级的选择，我觉得很多时候找的音效的效果反而能超出我的想象，而这个搜寻（大量试听）的过程也能给予我更多关于音效的灵感。
+<br><br></p>
+<h2>音效是一种秘密武器</h2>
+<p>我在做游戏时十分注意的一点就是氛围的塑造。对于玩家来说，在真实玩到一款游戏之前，它的氛围主要是由美术，或者说画面表现来呈现的。即使是在看宣传片的时候，也很少会有玩家关注到音效。但实际游玩的时候，游戏的氛围好不好，我觉得至少有一半是由音效决定的。
+<br><br>
+一个不合适的音效会瞬间破坏掉沉浸感，拿《诺亚》举例子，《诺亚》作为一款以诺亚方舟神话为背景的故事，如果按钮的点击声是8bit的电子音效，想必靠多好的美术也挽救不来失去的沉浸感；而一个合适的音效则会让氛围的渲染事半功倍，马上能想到的例子是《血源诅咒》里亚楠的咳嗽声，一个咳嗽声就把亚楠被疫病笼罩的氛围刻画出来了。从这个角度来说，音效确实是开发者的“秘密武器”，对没有大量开发资金的独立开发者而言更甚，仅靠优秀的音效，就能用很少的投入把氛围提高到一个很高的水平。诚然，能否选择到合适的音效也需要看个人造化，我在这里能传达的，也只是要尽量提高对音效重视程度这件事了。
+<br><br></p>
+<h2>我的音乐制作过程</h2>
+<p>从我开始做游戏的那一天起，我的目标之一便是有一天能够一个人完成一款游戏，这也是为什么我对于学习作曲一直抱有兴趣。不过因为各种各样的原因，自学作曲总是开了个头又中断，如此反复数次，直到2023年，我才第一次使用FL Studio写出一首游戏里勉强能用的曲子。然而等到《诺亚》项目正式开始，我的精力又转移到了开发上面，直到2025年初游戏做得差不多了，我才又重新开始接触作曲。
+<br><br>
+为《诺亚》作曲，无疑是我这次做《诺亚》最大的技术挑战，因为不仅是第一次为一个商业项目作曲，还必须要写符合《诺亚》风格的管弦乐。等同于本来就没什么基础，突然一上来就要做难题。虽然2023年就认真学过一小段时间，但因为间隔已久，无论是关于FL Studio还是关于作曲本身都忘得差不多了。努力从回忆里搜刮印象，倒是剩下了一个FL Studio用着不太顺手的印象。加之正好听说了Logic Pro的UI更直观，操作更简单，于是就顺势更换成了Logic Pro，下载了一个试用版跃跃欲试。虽然软件不同，但是和绘画软件一样，不同的DAW（Digital Audio Workstation）其实也有很多共性，需要互动的元素也大同小异，再加上Logic Pro的UI确实直观很多，于是很快就熟悉了基本操作。
+<br><br>
+知道了要怎么使用DAW，但具体要怎么写歌呢？我当时的整个流程可以概括如下：
+<br><br></p>
+<ul>
+<li>认真学习音乐理论。要是说我之前尝试学习了那么多次作曲学到最重要的东西是什么，那就是音乐理论的重要性。作曲可以不懂乐器，但是最好要懂乐理。对我来说，懂乐理之前和懂乐理之后，写歌的难度完全不一样，不懂乐理的时候写歌基本上是在碰运气，但有了乐理作为基础，写歌马上变成了一个有序的挑战。</li>
+<li>观看学习别人使用Logic Pro作曲的全流程视频，这类视频往往可以让我们掌握实操的最短路径。</li>
+<li>定下《诺亚》的音乐风格。BGM以经典管弦乐为主，NPC主题曲则视NPC设定而定，但要避免太现代的风格，以民族乐和中世纪风为主。</li>
+<li>定下各个曲子情绪的倾向性，简单来说就是有多明亮或者有多黑暗，再让chatGPT根据情绪提供不同的Key和和弦进行（这里之所以交给AI做，是因为这部分基本上就是排列组合，而我还不了解哪种排列组合有哪种特性），我再从中选出自己觉得好的。例如我想写一首紧张的战斗BGM，chatGPT提供给我一系列minor key和对应的和弦进行，我就会在midi键盘上弹出来，看看哪个好，再进行自己的修改，最后把Key和和弦进行都确定下来。</li>
+<li>根据上一步确定下来的Key和和弦进行进行作曲。这一步我说不出太多所以然，除了依照乐理使用和谐（或不和谐）的note和chord以外，作为一个新人我能做的就是相信自己的耳朵，按自己觉得好听的来写。因为要写很多战斗BGM，节奏变化也是一个我比较关注的地方。</li>
+<li>做最终的音量调整，淡入淡出之类的，除此之外几乎没有额外的后期处理。这一是为了保持《诺亚》的音乐风格而有意为之，二也是因为我还没有学到这个部分，正好不加入。我觉得音乐也和很多别的创作一样，东西不是越多越好的。
+<br><br>
+有一个概念已经被很多创作者提出过了，那就是“不要练习”，一上来就直接做作品，这样的进步和学习速度是最快的——回过头看，我学作曲也是先有了一个必须要去完成的任务，所以没有经历多少练习就直接上场去做了，结果确实是在做作品的过程中慢慢就学会了，所以可能的话，也推荐大家试试这个方法。
+<br><br>
+这次为《诺亚》写了大约20首曲子，由于题材的关系，音乐风格需要保持一致，也没法（也不懂）做很多创新，写到最后确实痛苦大于快乐，即便如此，我还是很开心能够第一次一个人完成一款游戏的配乐工作。下款游戏我应该也会继续尝试自己作曲，总能写点好写的曲子了吧。
+<br><br>
+好了，这篇日志就聊到这里，开发日志系列还剩下最后一篇，已经写完了，预计下周发布。如果好奇我写的音乐到底是什么样子，可以购买游戏听听看。感谢阅读，下期再见！
+<br><br></li>
+</ul>
+<h3>全文目录：</h3>
+<ul>
+<li><a href="/blog-zh/noah-1">《诺亚的困境》开发日志#1：数独与方舟</a>（关于原型与立项） - 已发布</li>
+<li><a href="/blog-zh/noah-2">《诺亚的困境》开发日志#2：编程上的总结与回顾</a>（关于编程） - 已发布</li>
+<li><a href="/blog-zh/noah-3">《诺亚的困境》开发日志#3：设计上的总结与回顾</a>（关于游戏设计） - 已发布</li>
+<li><a href="/blog-zh/noah-4">《诺亚的困境》开发日志#4：氛围与声音</a>（关于作曲与音效） - 已发布</li>
+<li>《诺亚的困境》开发日志#5：海上的百年孤独（关于美术与世界观）</li>
+</ul>
+<p><br><br>
+GP</p>
+<p>2025.7.10</p>
+
+                </div>
+            </div>
+            <hr class="bg-slate-50 border-1">
+        </div>
+    </main>
+    
+    
+    </body>
+    <footer class="footer">
+    <div class="container">
+        <p class="text-center pt-6 pb-8 mb-4 text-base font-normal text-gray-500">
+            © Guanpeng Chen. All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+</html>
