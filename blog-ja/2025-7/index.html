@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+    <head>
+        <title>2025年7月ゲーム開発月報</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../src/output.css" rel="stylesheet">
+    </head>
+    <body class="bg-stone-800">
+    <div class="container py-16 px-4">
+        <h1 class="text-5xl font-bold text-center text-slate-50">
+            
+            Blog by Guanpeng Chen
+            
+        </h1>
+    </div>
+    
+    
+
+    
+
+    
+    <!--Social Icons-->
+    <div class="container">
+    <div class="flex justify-center space-x-4">
+
+        <!--Twitter-->
+        <a href ="https://x.com/cguanpeng" target="_blank">
+            <img class="size-8" src="/images/x.png">
+        </a>
+
+        <!--Discord-->
+        <a href ="https://discord.com/invite/ZxmFQmqgpj" target="_blank">
+            <img class="size-8" src="/images/discord.png">
+        </a>
+
+        <!--Youtube-->
+        <a href ="https://www.youtube.com/@cguanpeng" target="_blank">
+            <img class="size-8" src="/images/youtube.png">
+        </a>
+
+        <!--Steam-->
+        <a href="https://store.steampowered.com/developer/cguanpeng" target="_blank">
+            <img class="size-8" src="/images/steam.png">
+        </a>
+
+        <!--itch-->
+        <a href ="https://undercurrent.itch.io/" target="_blank">
+            <img class="size-8" src="/images/itch.png">
+        </a>
+
+    </div>
+</div>
+
+
+    <!--Nav Buttons-->
+    <div class="flex justify-center pt-8">
+        <a href="/ja">
+            <button class="text-gray-400 hover:text-white border-2 border-gray-600 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                ゲーム
+            </button>
+        </a>
+        <a href="/blog-ja">
+            <button class="text-gray-400 hover:text-white border-2 border-gray-600 hover:bg-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                ブログ
+            </button>
+        </a>
+    </div>
+    
+    
+    <main class="relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8">
+        <div class="container py-8 px-4">
+            <hr class="bg-slate-50 border-1">
+            <div class="py-12 px-4">
+                
+                <h3 class="mb-1 text-3xl font-semibold text-slate-50">2025年7月ゲーム開発月報</h3>
+                
+                <time class="py-2 mb-2 text-lg font-normal leading-none text-gray-500">Aug 1, 2025</time>
+                <div class="text-slate-50 px-4 pb-4 pt-8">
+                    <h2>Nintendo Switch版『ノアのジレンマ』配信開始</h2>
+<p>7月24日に『ノアのジレンマ』がNintendo Switchにて配信開始！初めてのコンソールリリースなので、何が起きるか全然予想できなかった。一週間が過ぎた今、ようやくその初歩的な手応えを覚えた。主な感想をまとめると：</p>
+<ul>
+<li>思っていたより多く売れた（Steamリリースの時には全てのプロモーション手段を使ったが、Nintendo Switch版の時には最低限の告知しかしてなかった。しかし、ほぼ同じくらい売れた）</li>
+<li>不具合修正パッチの配信は時間が掛かる（Steamで修正ビルドはValveの承認なしで自分で配信できるが、Nintendo Switchでは任天堂さんの検証と承認が必要で、即時的なビルド更新はできない）</li>
+</ul>
+<p>以上の二点に基づいて、これから心掛けたいことは：</p>
+<ul>
+<li>Nintendo SwitchのeShopでは、小さいなゲームでも事前宣伝なしで多くの人の目に触れられそうで、良いゲームさえ作れば、Steamみたいに事前のウィッシュリスト集めや積極的な宣伝活動をしなくても、買ってくれるプレイヤーは一定数いるはず。</li>
+<li>Nintendo Switch版はリリース後の不具合修正の反映が時間掛かるので、リリース前にQAを何度も重ね、不具合をなるべく全部潰しておいた方がいい。</li>
+<li>また、同じ理由で、プレイヤーが簡単に不具合の情報やサポートを得られるように、SNSとDiscordの他に、サポート専用<strong>の</strong>ウェブサイトも作るべきだ。</li>
+</ul>
+<p>とりあえず、これからインディーゲームだけで食っていきたいなら、まず良いゲームを作るという大前提があって、そしてSteamだけでなく、Switchにも出し続けておけば、その目標には確実に近づいてゆけると、今回の経験から分かった。
+<br><br></p>
+<h2>かわいい女の子を描けるかどうか</h2>
+<p>趣味で日本の漫画業界のことも結構読んでいたので、この話はよく覚えている（出典は忘れたけど）：売れている漫画家のほとんどがかわいい女の子もしくはイケメンを描ける人。逆に言うと、売れるかどうかはかわいい女の子（イケメン）を描けるかどうかに直結している。
+<br><br>
+実際に一番売れている漫画のラインナップを見たらこれが正しいとは分かると思うが、これは漫画というメデイア特有の性質でもないと僕は考えている。視覚を働かせるナラティブメディアは全部そうだ。漫画の他に、映画、ドラマ、ADVゲームは全部このルールが通じる。なぜかと言うと、「美」ということ自体が一番シンプルで大衆的なエンターテイメントであるからかもしれない。
+<br><br>
+僕がこれから作りたいゲームのほとんどがナラティブ・ADVゲームなので、「どんなゲームを作る」という大きすぎる問題を考えてもなかなか答えが出てこないから、一旦その問題を「かわいい女の子を描けるかどうか」あるいは「どうやってかわいい女の子を描けるか」に変えて、今月の課題として取り込んでみた。はっきりとした答えはまだ出てきていないが、漠然と新作のアイデアを考えるよりはこの方がずっと力を入れられる。
+<br><br></p>
+<h2>迷走</h2>
+<p>今月いろいろな学びがあったけれども、実際の進捗は全然だめだった。まずはYouTube、決めていた企画を実際に作ってみたらコストが高すぎて、やむを得ずボツにした。本当にいい企画を思い付くまでYouTube動画は多分作らない。幸い、買った機材はサウンドの録音にも使えるので無駄にはならない。
+<br><br>
+そして次の新作、一回企画を決めていたけれど、YouTubeのことと今月末に参加する予定のGMTK GameJamのことが頭から離れてくれなくて、集中して新作を作ることができなかった。もしかしてGMTKJamで次の新作となるいいアイデアが出てくるかもしれないと、結局GMTKJamが終わるまでいっそ夏休みにした。
+<br><br>
+ということで、7月半ばからは積みゲームをやったり、映画・ドラマを見たり、『ベルセルク』を最新巻まで読んだりしていた。贅沢な夏休みも8月4日までだ。『ノアのジレンマ』も一段落したし、8月は確実に新作を作る段階に入るべきだ。かわいい女の子も描けるようになるといいね。
+<br><br></p>
+<p>GP</p>
+<p>2025.8.1</p>
+
+                </div>
+            </div>
+            <hr class="bg-slate-50 border-1">
+        </div>
+    </main>
+    
+    
+    </body>
+    <footer class="footer">
+    <div class="container">
+        <p class="text-center pt-6 pb-8 mb-4 text-base font-normal text-gray-500">
+            © 2020-2025 Guanpeng Chen. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+</html>
